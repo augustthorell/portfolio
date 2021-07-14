@@ -8,7 +8,7 @@ const Slider = styled(motion.div)`
     position: fixed;
     bottom: 10px;
     left: 50%;
-    transform: translate(-50% 0);
+    transform: translate(-50%, 0);
     display: flex;
     p {
         padding: 5px;
@@ -21,10 +21,11 @@ const Indicator = styled(motion.p)`
 `
 
 
-const SliderIndicator = () => {
+const SliderIndicator = ({ indicator }) => {
+
     return (
         <Slider>
-            <Indicator>1</Indicator><p>|</p><p>6</p>
+            <Indicator>{indicator}</Indicator><p>|</p><p>6</p>
         </Slider>
     )
 }
