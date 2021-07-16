@@ -1,76 +1,57 @@
 @import url('https://use.typekit.net/jmi8vwl.css');
 
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     scrollbar-width: none;
     font-family: mostra-nuova, sans-serif;
+}
 
-    
-  }
-  html {
-      overflow: scroll;
-      overflow-x: hidden;
-  }
- ::-webkit-scrollbar {
-    display: none;
-    scrollbar-width: none;
-  }
-  
-  /* Hide scrollbar for IE, Edge add Firefox */
-  .scrollbar-hidden {
-    -ms-overflow-style: none;
-    scrollbar-width: none; /* Firefox */
-  }
+html, body {
+        height: 100%;
+        overflow: hidden;
+}
+
 h1 {
   font-family: mostra-nuova, sans-serif;
-font-weight: 400;
-font-size: 14vmin;
-font-style: normal;
-
+  font-weight: 400;
+  font-size: 14vmin;
+  font-style: normal;
 }
+
 
 p {
   font-family: jubilat, serif;
-font-weight: 400;
-font-style: normal;
+  font-weight: 400;
+  font-style: normal;
 }
 
-#lala:hover {
-  position: grab;
+.App {
+  text-align: center;
+  color: rgb(226, 226, 226);
+  /* background: linear-gradient(-45deg, #2b2b25, #262713, #27264d, #50201f); */
+  /* background: linear-gradient(-45deg, #49493b, #953DAE, #843787, #99265A, #9C2828); */
+  background: linear-gradient(-45deg, #22204c, #2f3f56, #3b5c5f, #4a826b);
+  /* background-color: #652353; */
+  animation: gradient 15s ease infinite; 
+  background-size: 400% 400%;
+  height: 100vh;
+  width: 100vw;
+  box-sizing: border-box;
+  overflow: hidden;
+  overflow-x: hidden;
 }
-
-
-
-  .App {
-      text-align: center;
-      color: rgb(226, 226, 226);
-      /* background: linear-gradient(-45deg, #2b2b25, #262713, #27264d, #50201f); */
-      /* background: linear-gradient(-45deg, #49493b, #953DAE, #843787, #99265A, #9C2828); */
-      background: linear-gradient(-45deg, #22204c, #2f3f56, #3b5c5f, #4a826b);
-      /* background-color: #652353; */
-      animation: gradient 15s ease infinite; 
-      background-size: 400% 400%;
-      height: 100vh;
-      width: 100vw;
-      box-sizing: border-box;
-      
-    }
   
-    
-    @keyframes gradient {
-      0% {
-          background-position: 0% 50%;
-      }
-      50% {
-          background-position: 100% 50%;
-      }
-      100% {
-          background-position: 0% 50%;
-      
-      }
+@keyframes gradient {
+  0% {
+      background-position: 0% 50%;
   }
-
-
+  50% {
+      background-position: 100% 50%;
+  }
+  100% {
+      background-position: 0% 50%;
+  
+  }
+}

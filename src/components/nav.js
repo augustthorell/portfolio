@@ -2,10 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { Link } from "react-router-dom";
 import styled from 'styled-components'
 import { motion } from 'framer-motion'
-import {
-
-    useLocation
-} from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 
 
@@ -30,7 +27,7 @@ const NavItem = styled(motion.button)`
 background-color: transparent;
 border: none;
 color: #fff;
-font-size: 3vmin;
+font-size: 2.1vmax;
 
 &:hover {
     cursor: pointer;

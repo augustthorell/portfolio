@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { motion } from 'framer-motion'
 
 const Container = styled.div`
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     overflow: hidden;
     display: grid;
@@ -11,6 +11,7 @@ const Container = styled.div`
     grid-template-columns: repeat(2, 50%);
     @media (max-width: 800px) {
           grid-template-columns: 100%;
+          
       }
 `
 const TextContainer = styled(motion.div)`
@@ -19,7 +20,7 @@ const TextContainer = styled(motion.div)`
     width: 100%;
     max-width: 600px;
     text-align: left;
-    
+    padding-left: 50px;
     h1 {
         text-transform: uppercase;
         font-size: 2.5rem;
@@ -29,13 +30,22 @@ const TextContainer = styled(motion.div)`
         width: 100%;
         min-width: 150px;
     }
+    @media (max-width: 800px) {
+        padding-left: 0;
+        h1 { text-align: center; }
+        p { 
+            margin: 0 auto;
+            width: 90%
+        }
+        
+    }
+    
 `
 const ModelWrapper = styled.div`
 align-self: center;
 justify-self: center;
 img {
     width: 100%;
-    
 }
 @media (max-width: 800px) {
     height: 100%;
@@ -48,6 +58,10 @@ const ButtonWrapper = styled.div`
     width: 100%;
     a {
         margin-right: 15px;
+    }
+    @media (max-width: 800px) {
+        justify-content: center;
+        margin-right: 0;
     }
 `
 const Button = styled.button`

@@ -4,7 +4,7 @@ import ProjectTemplate from '../components/projectTemplate'
 import { projectsData } from "../projectsData";
 import { motion } from 'framer-motion'
 import SliderIndicator from '../components/sliderIndicator';
-import '../style/projects.css';
+
 
 const Wrapper = styled(motion.div)`
    position: fixed;
@@ -18,7 +18,7 @@ overflow: hidden;
 max-height: 600vh;
 transition: 1s cubic-bezier(0.5, 0, 0.5, 1);
     @media (max-width: 800px) {
-        
+        padding: 30px 10px;
     }   
 `
 
@@ -29,10 +29,9 @@ const Projects = () => {
     const [indicator, setIndicator] = useState(1);
 
     useEffect(() => {
-        /*[pan and well CSS scrolls]*/
+
         var pnls = document.querySelectorAll('.panel').length,
             scdir, hold = false;
-
         function _scrollY(obj) {
             var slength, plength, pan, step = 100,
                 vh = window.innerHeight / 100,
@@ -46,26 +45,19 @@ const Projects = () => {
             }
             plength = plength || parseInt(pan.offsetHeight / vmin);
             slength = parseInt(pan.style.transform.replace('translateY(', ''));
-            if (scdir === 'up' && Math.abs(slength) < (plength - plength / pnls)) {
-                slength = slength - step;
-            } else if (scdir === 'down' && slength < 0) {
-                slength = slength + step;
-            } else if (scdir === 'top') {
-                slength = 0;
-            }
+            if (scdir === 'up' && Math.abs(slength) < (plength - plength / pnls)) { slength = slength - step; }
+            else if (scdir === 'down' && slength < 0) { slength = slength + step; }
+            else if (scdir === 'top') { slength = 0; }
             if (hold === false) {
                 hold = true;
                 pan.style.transform = 'translateY(' + slength + 'vh)';
                 setTimeout(function () {
                     hold = false;
-                    setIndicator((slength / 100) * -1 + 1);
-
+                    setIndicator((slength / -100) + 1);
                 }, 1000);
             }
-
-
         }
-        /*[swipe detection on touchscreen devices]*/
+
         function _swipe(obj) {
             var swdir,
                 sX,
@@ -73,24 +65,21 @@ const Projects = () => {
                 dX,
                 dY,
                 threshold = 100,
-                /*[min distance traveled to be considered swipe]*/
                 slack = 50,
-                /*[max distance allowed at the same time in perpendicular direction]*/
                 alT = 500,
-                /*[max time allowed to travel that distance]*/
-                elT, /*[elapsed time]*/
-                stT; /*[start time]*/
+                elT,
+                stT;
             obj.addEventListener('touchstart', function (e) {
                 var tchs = e.changedTouches[0];
                 swdir = 'none';
                 sX = tchs.pageX;
                 sY = tchs.pageY;
                 stT = new Date().getTime();
-                //e.preventDefault();
+
             }, false);
 
             obj.addEventListener('touchmove', function (e) {
-                e.preventDefault(); /*[prevent scrolling when inside DIV]*/
+                e.preventDefault();
             }, false);
 
             obj.addEventListener('touchend', function (e) {
@@ -118,7 +107,6 @@ const Projects = () => {
                 }
             }, false);
         }
-        /*[assignments]*/
         var well = document.getElementById('well');
         if (well === null) return;
         well.style.transform = 'translateY(0)';
@@ -137,18 +125,20 @@ const Projects = () => {
 
 
     return (
-
-        <Wrapper>
-            <ProjectWrapper id='well'>
-                {projectsData.map(project => (
-                    <ProjectTemplate key={project.title} project={project} />
-                ))}
-            </ProjectWrapper>
+        <>
+            <Wrapper
+                initial={{ x: '100vw' }}
+                animate={{ x: 0 }}
+                exit={{ x: '100vw' }}
+                transition={{ duration: .6 }}>
+                <ProjectWrapper id='well'>
+                    {projectsData.map(project => (<ProjectTemplate key={project.title} project={project} />))}
+                </ProjectWrapper>
+            </Wrapper>
             <SliderIndicator indicator={indicator} />
-        </Wrapper>
+        </>
 
     )
-
 }
 
 export default Projects
