@@ -18,7 +18,7 @@ overflow: hidden;
 max-height: 600vh;
 transition: 1s cubic-bezier(0.5, 0, 0.5, 1);
     @media (max-width: 800px) {
-        padding: 30px 10px;
+        padding: 10px 10px;
     }   
 `
 

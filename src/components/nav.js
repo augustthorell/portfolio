@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import styled from 'styled-components'
 import { motion } from 'framer-motion'
 import { useLocation } from "react-router-dom";
+import '../style/extra.css'
 
 
 
@@ -64,7 +65,7 @@ const Nav = () => {
     return (
         <NavBar>
             <NavList>
-                <Link to='/about'>
+                <Link to='/about' className='hvr-underline-from-left'>
                     <NavItem>About</NavItem>
                 </Link>
 
@@ -75,7 +76,7 @@ const Nav = () => {
                     >AUGUST THORELL</NavItem>
                 </Link>
 
-                <Link to='/projects'>
+                <Link to='/projects' className='hvr-underline-from-right'>
                     <NavItem>Projects</NavItem>
                 </Link>
             </NavList>

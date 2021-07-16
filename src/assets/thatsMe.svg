@@ -1,0 +1,39 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 101.8 79.16">
+  <defs>
+    <style>
+      .cls-1 {
+        font-size: 12px;
+        fill: #e2e2e2;
+        font-family: JubilatLight, Jubilat;
+      }
+
+      .cls-2 {
+        letter-spacing: 0em;
+      }
+
+      .cls-3 {
+        letter-spacing: 0em;
+      }
+
+      .cls-4 {
+        letter-spacing: -0.02em;
+      }
+
+      .cls-5 {
+        letter-spacing: -0.04em;
+      }
+
+      .cls-6 {
+        letter-spacing: -0.01em;
+      }
+
+      .cls-7 {
+        fill: none;
+        stroke: #e2e2e2;
+        stroke-miterlimit: 10;
+      }
+    </style>
+  </defs>
+  <text class="cls-1" transform="translate(0.86 9.41) rotate(19.57)"><tspan class="cls-2">T</tspan><tspan class="cls-3" x="7.49" y="0">h</tspan><tspan class="cls-4" x="14.27" y="0">a</tspan><tspan x="20.22" y="0">t</tspan><tspan class="cls-5" x="23.7" y="0">’</tspan><tspan x="25.22" y="0">s </tspan><tspan class="cls-6" x="33.14" y="0">m</tspan><tspan x="43.15" y="0">e!</tspan></text>
+  <path class="cls-7" d="M233.39,326.52s18.59,20.94,30.91,26,25.24,0,25.24,0,11.74-4.3,1.37-17-17.21-3.91-17.21-3.91-5.48,6.06-3.72,16.24,15.85,21.72,15.85,21.72,11.29,8.31,25,11.64l-2.1-12.43,2.15,12.72-14.61,3.33" transform="translate(-209.64 -306.15)"/>
+</svg>

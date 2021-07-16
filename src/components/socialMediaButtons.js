@@ -35,10 +35,10 @@ const List = styled.li`
         background: #52E19F !important;
       }
     &:nth-child(2):hover span{
-        background: #2C3456 !important;
+        background: #EA6E96 !important;
       }
     &:nth-child(3):hover span{
-        background: #EA6E96 !important;
+        background: #2C3456 !important;
       }
     span {
         position: absolute;
@@ -76,8 +76,6 @@ const Email = styled.p`
 
 
 function copyText() {
-
-
     const copied = document.getElementById('emailCopied');
     const icon = document.getElementById('emailIcon');
     copied.style.opacity = '1'
@@ -118,7 +116,7 @@ const SocialMediaButtons = () => {
         <Container>
             <ul>
                 <List >
-                    <a href='https://github.com/augustthorell' role='button' onClick={copyText}>
+                    <a href='https://github.com/augustthorell' role='button'>
                         <span />
                         <span />
                         <span><FaGithub /></span>

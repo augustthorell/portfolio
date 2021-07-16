@@ -2,6 +2,7 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import styled from 'styled-components';
 import Logo from '../assets/final.png'
+
 import SocialMediaButtons from '../components/socialMediaButtons.js';
 
 const Container = styled(motion.div)`
@@ -24,17 +25,19 @@ const Wrapper = styled.div`
     padding: 0 25px;
     p {
         text-align: left;
+        max-width: 550px;
     }
 `
 const ImageWrapper = styled.div`
     display: flex;
     justify-content: flex-end;
     align-items: center;   
+    position: relative;
     @media (max-width: 800px) {
         align-items: flex-end;   
     }   
     img {
-        width: 100%;
+        width: 80%;
         max-width: 500px;
     }
 `
@@ -47,9 +50,8 @@ const SocialMediaWrapper = styled.div`
     position: relative;
 `
 
+
 const About = () => {
-
-
 
     return (
         <Container
@@ -57,15 +59,22 @@ const About = () => {
             animate={{ x: 0 }}
             exit={{ x: '-100vw' }}
             transition={{ duration: .6 }}>
-
-
             <ImageWrapper>
                 <img src={Logo} alt='Illustration of me with a wierd mustache' />
             </ImageWrapper>
 
             <Wrapper>
-                <Description>About me</Description>
-                <p>This is a description about me which will contain more info in the future I hope</p>
+                <Description>Hello!</Description>
+                <p>
+                    My name is August Thorell and I'm a frontend developer
+                    living in Stockholm, Sweden. I'm currently a student at Hyper Island.
+                    <br /> <br />
+                    I'm very comfortable with frameworks such as React and Gatsby and I'm currently focusing a lot on Flutter and Dart.
+                    I'm a curios person the likes to explore new ways of solving problems and finding clever solutions.
+                    <br /> <br />
+                    If you want to learn more about me you can visit my Github or Linkedin, or contact me through email
+
+                </p>
                 <SocialMediaWrapper>
                     <SocialMediaButtons />
                 </SocialMediaWrapper>

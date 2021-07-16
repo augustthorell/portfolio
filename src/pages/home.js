@@ -18,6 +18,7 @@ const Content = styled(motion.div)`
 `
 const Description = styled.p`
     padding: 0 50px;
+    max-width: 600px;
 `
 const move = keyframes`
     0%, 80%, 100% {
@@ -63,25 +64,28 @@ const MouseWheel = styled.div`
 const Home = () => {
 
     const history = useHistory();
-    var touchPos;
+
 
 
     useEffect(() => {
+        let touchPos;
         window.addEventListener('wheel', (e) => {
-            if (e.deltaY > 0) {
-                history.push('/Projects')
+            if (e.deltaY > 0 && history.location.pathname === '/') {
+
+                history.push('/projects')
             }
         })
-
-        document.body.ontouchstart = function (e) {
+        window.ontouchstart = function (e) {
             touchPos = e.changedTouches[0].clientY;
         }
-        document.body.ontouchmove = function (e) {
-            if (e.changedTouches[0].clientY < touchPos) {
-                history.push('/Projects')
+        window.ontouchmove = function (e) {
+            if (e.changedTouches[0].clientY < touchPos && history.location.pathname === '/') {
+                history.push('/projects')
             }
         }
-    }, [])
+
+    }, [history])
+
 
     return (
         <Wrapper>
