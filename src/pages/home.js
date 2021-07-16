@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { useHistory } from "react-router-dom";
 import styled, { keyframes } from 'styled-components';
@@ -63,11 +63,25 @@ const MouseWheel = styled.div`
 const Home = () => {
 
     const history = useHistory();
-    document.addEventListener('wheel', (e) => {
-        if (e.deltaY > 0) {
-            history.push('/Projects')
+    var touchPos;
+
+
+    useEffect(() => {
+        window.addEventListener('wheel', (e) => {
+            if (e.deltaY > 0) {
+                history.push('/Projects')
+            }
+        })
+
+        document.body.ontouchstart = function (e) {
+            touchPos = e.changedTouches[0].clientY;
         }
-    })
+        document.body.ontouchmove = function (e) {
+            if (e.changedTouches[0].clientY < touchPos) {
+                history.push('/Projects')
+            }
+        }
+    }, [])
 
     return (
         <Wrapper>

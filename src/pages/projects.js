@@ -23,19 +23,28 @@ transition: 1s cubic-bezier(0.5, 0, 0.5, 1);
 `
 
 
+window.onscroll = function (ev) {
 
+    console.log('bottom')
+
+};
 
 const Projects = () => {
+
+
+
+
+
     const [indicator, setIndicator] = useState(1);
 
     useEffect(() => {
-
         var pnls = document.querySelectorAll('.panel').length,
             scdir, hold = false;
         function _scrollY(obj) {
             var slength, plength, pan, step = 100,
                 vh = window.innerHeight / 100,
                 vmin = Math.min(window.innerHeight, window.innerWidth) / 100;
+
             if ((this !== undefined && this.id === 'well') || (obj !== undefined && obj.id === 'well')) {
                 pan = this || obj;
                 plength = parseInt(pan.offsetHeight / vh);
@@ -43,6 +52,12 @@ const Projects = () => {
             if (pan === undefined) {
                 return;
             }
+            if (pan.style.webkitTransform === 'translateY(-500vh)' && scdir === 'up') {
+                return;
+            }
+
+
+
             plength = plength || parseInt(pan.offsetHeight / vmin);
             slength = parseInt(pan.style.transform.replace('translateY(', ''));
             if (scdir === 'up' && Math.abs(slength) < (plength - plength / pnls)) { slength = slength - step; }
@@ -54,11 +69,13 @@ const Projects = () => {
                 setTimeout(function () {
                     hold = false;
                     setIndicator((slength / -100) + 1);
+
                 }, 1000);
             }
         }
 
         function _swipe(obj) {
+
             var swdir,
                 sX,
                 sY,
@@ -70,6 +87,7 @@ const Projects = () => {
                 elT,
                 stT;
             obj.addEventListener('touchstart', function (e) {
+                console.log(e)
                 var tchs = e.changedTouches[0];
                 swdir = 'none';
                 sX = tchs.pageX;
@@ -79,10 +97,12 @@ const Projects = () => {
             }, false);
 
             obj.addEventListener('touchmove', function (e) {
+
                 e.preventDefault();
             }, false);
 
             obj.addEventListener('touchend', function (e) {
+
                 var tchs = e.changedTouches[0];
                 dX = tchs.pageX - sX;
                 dY = tchs.pageY - sY;
