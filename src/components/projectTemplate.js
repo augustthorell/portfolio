@@ -1,6 +1,12 @@
 import React from 'react'
 import styled from 'styled-components'
 import { motion } from 'framer-motion'
+import PomodoroImg from '../assets/pomodoro-app.png'
+import RicolaImg from '../assets/ricola.png'
+import FemartImg from '../assets/femart.png'
+import HabitTrackerImg from '../assets/habit-tracker.png'
+import ThePerfectNightImg from '../assets/the-perfect-night.png'
+import GameSiteImg from '../assets/game-site.png'
 
 const Container = styled.div`
     width: 100%;
@@ -83,6 +89,8 @@ const ProjectTemplate = ({ project }) => {
 
     let SiteButton;
     let GithubButton;
+    let Image = project.title;
+
 
     if (project.websiteLink) {
         SiteButton = (
@@ -99,6 +107,30 @@ const ProjectTemplate = ({ project }) => {
         )
     }
 
+    switch (Image) {
+
+        case 'Pomodoro App':
+            Image = PomodoroImg;
+            break;
+        case 'Ricola':
+            Image = RicolaImg;
+            break;
+        case 'Femart':
+            Image = FemartImg;
+            break;
+        case 'Habit Tracker':
+            Image = HabitTrackerImg;
+            break;
+        case 'The Perfect Night':
+            Image = ThePerfectNightImg;
+            break;
+        case 'Game Site':
+            Image = GameSiteImg;
+            break;
+        default:
+            break;
+    }
+
     return (
         <>
             <Container className='panel'>
@@ -111,7 +143,7 @@ const ProjectTemplate = ({ project }) => {
                     </ButtonWrapper>
                 </TextContainer>
                 <ModelWrapper>
-                    <img src={project.image} alt={project.altText} />
+                    <img src={Image} alt={project.altText} />
                 </ModelWrapper>
             </Container>
         </>

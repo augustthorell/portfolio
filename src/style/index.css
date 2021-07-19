@@ -69,3 +69,36 @@ p {
   
     100%{background-position:100% 50%}
 }
+
+.navBtnUnderline:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  bottom: 0;
+  background: rgb(226, 226, 226);
+  height: 2px;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.left:before {
+  left: 0;
+  right: 100%;
+  -webkit-transition-property: right;
+  transition-property: right;
+}
+.right:before {
+  left: 100%;
+  right: 0;
+  -webkit-transition-property: left;
+  transition-property: left;
+}
+
+.left:hover:before, .left:focus:before, .left:active:before {
+  right: 0;
+}
+
+.right:hover:before, .right:focus:before, .right:active:before {
+  left: 0;
+}
