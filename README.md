@@ -6,4 +6,4 @@
 My portfolio that I've built with React.
 It's hosted on Netlify with a custom domain from Namecheap.
 
-augustthorell.com
+[augustthorell.com](https://www.augustthorell.com)
