@@ -36,7 +36,7 @@ export const projectsData = [
     },
     {
         title: 'Game Site',
-        description: 'My first game project where I build different mini games in vanilla JavaScript.',
+        description: 'My first game project where I build different mini games such as Rock-paper-scissor, Memory, Snake and Catch in vanilla JavaScript.',
         altText: 'A computer with my game site running.',
         websiteLink: 'https://augustthorell.github.io/my-first-game/',
         githubLink: 'https://github.com/augustthorell/pomodoro_app',
