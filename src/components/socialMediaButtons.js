@@ -143,7 +143,7 @@ const SocialMediaButtons = () => {
                     </div>
                 </List>
                 <List >
-                    <a href={CV + '#toolbar=0&navpanes=0'} role='button'>
+                    <a href={CV} role='button'>
                         <span />
                         <span />
                         <span><FaRegFilePdf /></span>
