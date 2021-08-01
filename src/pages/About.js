@@ -38,7 +38,7 @@ const ImageWrapper = styled.div`
        max-width: 450px;
        width: auto;
         @media (max-width: 700px) {
-            max-width: 300px;
+           display: none;
         } 
         @media (max-width: 1100px) {
             align-items: flex-end;

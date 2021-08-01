@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components';
-import { FaGithub, FaLinkedinIn, FaRegEnvelope } from 'react-icons/fa';
+import { FaGithub, FaLinkedinIn, FaRegEnvelope, FaRegFilePdf } from 'react-icons/fa';
+import CV from '../assets/CV.pdf'
 
 const Container = styled.div`
     position: relative;
@@ -8,8 +9,10 @@ const Container = styled.div`
 const List = styled.li`
     position: relative;
     list-style: none;
-    width: 60px;
-    height: 60px;
+    width: 12vw;
+    height: 12vw;
+    max-width: 60px;
+    max-height: 60px;
     margin: 20px;
     float:left;
     &:hover span {
@@ -38,7 +41,10 @@ const List = styled.li`
         background: #EA6E96 !important;
       }
     &:nth-child(3):hover span{
-        background: #2C3456 !important;
+        background: #444f7c !important;
+      }
+    &:nth-child(4):hover span{
+        background: #1d2442 !important;
       }
     span {
         position: absolute;
@@ -63,7 +69,7 @@ const List = styled.li`
     }
 `
 const Email = styled.p`
-    font-size: 15px;
+    font-size: .4em;
     position: absolute;
     padding-left: 9px;
     transition: 1s ease-in-out;
@@ -136,7 +142,13 @@ const SocialMediaButtons = () => {
                         <span><FaRegEnvelope id='emailIcon' /><Email id="emailCopied">Email adress copied</Email></span>
                     </div>
                 </List>
-
+                <List >
+                    <a href={CV + '#toolbar=0&navpanes=0'} role='button'>
+                        <span />
+                        <span />
+                        <span><FaRegFilePdf /></span>
+                    </a>
+                </List>
             </ul>
         </Container>
     )

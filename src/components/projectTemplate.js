@@ -18,6 +18,7 @@ const Container = styled.div`
     @media (max-width: 800px) {
           grid-template-columns: 100%;
           
+          padding-top: 40px;
       }
 `
 const TextContainer = styled(motion.div)`

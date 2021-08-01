@@ -12,12 +12,12 @@ const Slider = styled(motion.div)`
     display: flex;
     p {
         padding: 5px;
+        color: rgba(250,250,250,.8)
     }
-    p:nth-child(2) {
-        
+    @media (max-width: 800px) {
+        left: 90%;
     }
-`
-const Indicator = styled(motion.p)`
+    
 `
 
 
@@ -25,7 +25,7 @@ const SliderIndicator = ({ indicator }) => {
 
     return (
         <Slider>
-            <Indicator>{indicator}</Indicator><p>|</p><p>6</p>
+            <p>{indicator}</p><p>|</p><p>6</p>
         </Slider>
     )
 }

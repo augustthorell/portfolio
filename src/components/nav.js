@@ -10,8 +10,7 @@ const NavBar = styled.div`
     width: 100vw;
     height: 80px;
     z-index: 2000;
-    position: fixed;
-    
+    position: fixed;    
 `
 const NavList = styled.ul`
     display:flex;
@@ -24,7 +23,6 @@ const NavList = styled.ul`
         transform: perspective(1px) translateZ(0);
         position: relative;
         overflow: hidden;        
-        
     }
     a:nth-child(1) button, a:nth-child(3) button {
         font-size: calc(10px + 1.2vmax);
@@ -54,7 +52,6 @@ const Nav = () => {
         }
     }, [location.pathname])
 
-
     const variant = {
         active: {
             opacity: 0,
@@ -68,14 +65,12 @@ const Nav = () => {
         },
     }
 
-
     return (
         <NavBar>
             <NavList>
                 <Link to='/about' className='navBtnUnderline left'>
                     <NavItem>About</NavItem>
                 </Link>
-
                 <Link to='/' >
                     <NavItem
                         variants={variant}
@@ -83,12 +78,10 @@ const Nav = () => {
                         style={{ opacity: 0 }}
                     >AUGUST THORELL</NavItem>
                 </Link>
-
                 <Link to='/projects' className='navBtnUnderline right'>
                     <NavItem>Projects</NavItem>
                 </Link>
             </NavList>
-
         </NavBar>
     )
 }

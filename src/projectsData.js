@@ -7,7 +7,7 @@ export const projectsData = [
     },
     {
         title: 'Ricola',
-        description: 'A client brief for Ricola where we developed a site using React and Gatsby to showcase how they as a company work sustainable. I worked together with another frontend developer and two UX designers to deliver a website that the clint would be satisfied with. We decided to build the first part of the page with React and later on added a magazine section which was build with Gatsby',
+        description: 'A client brief for Ricola where we developed a site using React and Gatsby to showcase how they as a company work sustainable. I worked together with another frontend developer and two UX designers. The homepage was built with React and we later on added a magazine section which was build with Gatsby.',
         altText: 'A tablet displaying the website that we built for Ricola.',
         websiteLink: 'https://augustthorell.github.io/Ricola/#/',
         githubLink: 'https://github.com/augustthorell/Ricola',
@@ -24,7 +24,6 @@ export const projectsData = [
         altText: 'A computer displaying our habit tracker.',
         websiteLink: 'https://kol845.github.io/Habit-Tracker/',
         githubLink: 'https://github.com/augustthorell/pomodoro_app',
-
     },
     {
         title: 'The Perfect Night',
@@ -32,7 +31,6 @@ export const projectsData = [
         altText: 'A phone with the website The perfect night running.',
         websiteLink: 'https://augustthorell.github.io/The-Perfect-Night/',
         githubLink: 'https://github.com/augustthorell/pomodoro_app',
-
     },
     {
         title: 'Game Site',
@@ -40,21 +38,5 @@ export const projectsData = [
         altText: 'A computer with my game site running.',
         websiteLink: 'https://augustthorell.github.io/my-first-game/',
         githubLink: 'https://github.com/augustthorell/pomodoro_app',
-
     }
-]
-
-export const socialMediaLinks = [
-    {
-        name: 'Github',
-        link: 'https://github.com/augustthorell',
-    },
-    {
-        name: 'Linkedin',
-        link: 'https://www.linkedin.com/in/augustthorell/',
-    },
-    {
-        name: 'Email',
-        link: 'mailto: augustthorell@gmail.com',
-    },
 ]
