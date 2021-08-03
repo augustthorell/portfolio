@@ -20,7 +20,7 @@ export const projectsData = [
     },
     {
         title: 'Habit Tracker',
-        description: 'This was a project where me and two others experiented with local storage. We built a habit tracker where the user can add their own habits and we emphasize on customizability. The product was built with vanilla JavaScript.',
+        description: 'This was a project where me and two others experimented with local storage. We built a habit tracker where the user can add their own habits and we emphasize on customizability. The product was built with vanilla JavaScript.',
         altText: 'A computer displaying our habit tracker.',
         websiteLink: 'https://kol845.github.io/Habit-Tracker/',
         githubLink: 'https://github.com/augustthorell/pomodoro_app',
